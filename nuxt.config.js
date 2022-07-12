@@ -37,4 +37,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  publicRuntimeConfig: {
+    envLabel: process.env.ENV_LABEL
+  }
 }

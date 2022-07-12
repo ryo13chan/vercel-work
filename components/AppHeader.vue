@@ -1,5 +1,6 @@
 <template>
   <div class="header">
+    <div>{{ envLabel }}</div>
     <nav>
       <ul class="menu-list">
         <li class="menu">
@@ -24,11 +25,19 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'AppHeader',
+  computed: {
+    envLabel() {
+      return this.$config.envLabel
+    }
+  }
 })
 </script>
 
 <style lang="scss" scoped>
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .menu-list {
     display: flex;
     justify-content: end;
